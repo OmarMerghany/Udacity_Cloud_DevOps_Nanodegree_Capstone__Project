@@ -1,0 +1,27 @@
+[
+	{
+		"ParameterKey": "EnvironmentName",
+		"ParameterValue": "OmarMerghanyCapstoneProject"
+	},
+	{
+		"ParameterKey": "VpcCIDR",
+		"ParameterValue": "10.0.0.0/16"
+	},
+	{
+		"ParameterKey": "PublicSubnet1CIDR",
+		"ParameterValue": "10.0.0.0/24"
+	},
+	{
+		"ParameterKey": "PublicSubnet2CIDR",
+		"ParameterValue": "10.0.1.0/24"
+	},
+	{
+		"ParameterKey": "PublicSubnet3CIDR",
+		"ParameterValue": "10.0.3.0/24"
+	}
+]
+
+  
+// aws cloudformation create-stack --stack-name UdacityCapStone-Infrastructure --region us-west-2 --template-body file://network.yml --parameters file://network-parameters.json --capabilities CAPABILITY_IAM
+
+// aws cloudformation create-stack --stack-name UdacityCapStone-K8S --region us-west-2 --template-body file://k8s-cluster.yml --parameters file://k8s-cluster-parameters.json --capabilities CAPABILITY_IAM
