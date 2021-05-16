@@ -39,7 +39,7 @@ pipeline {
       steps {
         script {
           // Push the Docker image to ECR
-	    docker.withRegistry(ECRURL, ECRCRED) {
+	    docker.withRegistry('https://356782802290.dkr.ecr.us-west-2.amazonaws.com', 'https://1234567890.dkr.ecr.us-west-2.amazonaws.com') {
 						docker.image(IMAGE).push("latest")
             docker.image(IMAGE).push(VERSION)
           }
