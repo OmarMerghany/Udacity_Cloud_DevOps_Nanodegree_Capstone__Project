@@ -6,7 +6,7 @@ pipeline {
 				IMAGE = "$PROJECT"
 				ECRURL = "https://356782802290.dkr.ecr.us-west-2.amazonaws.com/$PROJECT"
 				ECRURI = "356782802290.dkr.ecr.us-west-2.amazonaws.com/$PROJECT"
-				ECRCRED = 'ecr:us-west-2:jenkins'
+				ECRCRED = 'ecr:us-west-2:Temp_User_For_Learning'
   }
 	stages {
 		stage("Lint Dockerfile") {
