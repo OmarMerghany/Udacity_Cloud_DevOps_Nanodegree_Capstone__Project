@@ -9,11 +9,11 @@ spec:
   selector:
     matchLabels:
       app: capstone-sample-app
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
+  # strategy:
+  #   rollingUpdate:
+  #     maxSurge: 25%
+  #     maxUnavailable: 25%
+  #   type: RollingUpdate
   template:
     metadata:
       labels:
