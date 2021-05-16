@@ -1,0 +1,2 @@
+GitHub Repo: https://github.com/OmarMerghany/Udacity_Cloud_DevOps_Nanodegree_Capstone__Project
+DNS Endpoint: http://af172db5132454141bdd9366ddd49d2a-1201007166.us-west-2.elb.amazonaws.com/ 
