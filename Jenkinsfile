@@ -41,11 +41,12 @@ pipeline {
 			  script {
 			    sh 'aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 356782802290.dkr.ecr.us-west-2.amazonaws.com'
 			    sh 'docker push 356782802290.dkr.ecr.us-west-2.amazonaws.com/capstone-sample-app:latest'
-         }
-        }
-      }    stage('K8S Deploy') {
-      steps {
-				withAWS(credentials: 'jenkins', region: 'us-west-2') {
+         	  }
+      }
+		}    
+		stage('K8S Deploy') {
+		  steps {
+				withAWS(credentials: 'Temp_User_For_Learning', region: 'us-west-2') {
 					sh "aws eks --region us-west-2 update-kubeconfig --name UdacityCapStone-Cluster"
 					// Configure deployment
 					sh "kubectl apply -f k8s/deployment.yml"
