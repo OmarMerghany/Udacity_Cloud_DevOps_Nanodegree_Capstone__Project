@@ -19,8 +19,16 @@ spec:
       labels:
         app: capstone-sample-app
     spec:
+      # containers:
+      #   - name: devops-capstone
+      #     image: omarmerghany/app
+      #     ports:
+      #       - containerPort: 80
       containers:
-        - name: devops-capstone
-          image: omarmerghany/app
+        - image: 356782802290.dkr.ecr.us-west-2.amazonaws.com/capstone-sample-app:latest
+          name: capstone-sample-app
           ports:
             - containerPort: 80
+              name: http-server
+      imagePullSecrets:
+        - name: ecr-secret
