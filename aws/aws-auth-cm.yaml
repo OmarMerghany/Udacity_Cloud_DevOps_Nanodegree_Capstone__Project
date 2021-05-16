@@ -5,12 +5,12 @@ metadata:
   namespace: kube-system
 data:
   mapUsers: |
-    - userarn: arn:aws:iam::356782802290:user/udacity
-      username: jenkins
+    - userarn: arn:aws:iam::356782802290:user/Temp_User_For_Learning
+      username: Temp_User_For_Learning
       groups:
         - system:masters
   mapRoles: |
-    - rolearn: arn:aws:iam::356782802290:role/UdacityCapStone-K8S-Workers-NodeInstanceRole-6LW3P7YAVFQU	
+    - rolearn: arn:aws:iam::356782802290:role/UdacityCapStone-K8S-Workers-NodeInstanceRole-1XWPRTF7RB23S
       username: system:node:{{EC2PrivateDNSName}}
       groups:
         - system:bootstrappers

@@ -1,3 +1,7 @@
+Description: >
+  Felix Geelhaar / Udacity Project Capstone
+  This template defines the K8S cluster
+
 Parameters:
   StackName:
     Type: String
