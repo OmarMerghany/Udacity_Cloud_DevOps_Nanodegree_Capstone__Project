@@ -49,7 +49,8 @@ pipeline {
 		}    
 		stage('K8S Deploy') {
 		  steps {
-				withAWS(credentials: 'Temp_User_For_Learning', region: 'us-west-2') {
+				// withAWS(credentials: 'Temp_User_For_Learning', region: 'us-west-2') {
+				script {
 					sh "aws eks --region us-west-2 update-kubeconfig --name UdacityCapStone-Cluster"
 					// Configure deployment
 					sh "kubectl apply -f k8s/deployment.yml"
