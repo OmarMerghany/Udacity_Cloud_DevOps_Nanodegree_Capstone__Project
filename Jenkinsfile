@@ -41,7 +41,9 @@ pipeline {
 			  script {
 			    // sh 'aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 356782802290.dkr.ecr.us-west-2.amazonaws.com'
 			    // sh 'docker push 356782802290.dkr.ecr.us-west-2.amazonaws.com/capstone-sample-app:latest'
-				docker.withRegistry('https://356782802290.dkr.ecr.us-west-2.amazonaws.com','ecr:us-west-2:aws-instance-role') {docker.image(IMAGE).push("latest")}
+				sh("eval \$(aws ecr get-login --no-include-email | sed 's|https://||')")
+                docker.withRegistry(ECRURL, ECRCRED)
+				// docker.withRegistry('https://356782802290.dkr.ecr.us-west-2.amazonaws.com','ecr:us-west-2:aws-instance-role') {docker.image(IMAGE).push("latest")}
          	  }
       }
 		}    
