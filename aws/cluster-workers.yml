@@ -1,6 +1,5 @@
 Description: >
-  Felix Geelhaar / Udacity Project Capstone
-  This template defines the k8s worker nodes
+  This template defines the kubernetes worker nodes
 
 Parameters:
   KeyName:
